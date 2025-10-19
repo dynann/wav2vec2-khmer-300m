@@ -13,7 +13,7 @@ df = pd.read_csv(
     "data/line_index.csv",
     header=None,
     names=["file_id", "unused", "transcription"],
-    nrows=1000
+    nrows=2906
 )
 
 df = df.drop(columns=["unused"])
@@ -53,4 +53,5 @@ print(vocab_dict)
 
 
 with open('./vocab.json', 'w') as vocab_file:
+
     json.dump(vocab_dict, vocab_file)
